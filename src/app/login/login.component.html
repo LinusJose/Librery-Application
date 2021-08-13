@@ -1,0 +1,27 @@
+<div class="login">
+  <h1>Login to Librery Application</h1>
+  <form method="post" [formGroup]="loginForm" (ngSubmit)="login()" action="">
+
+    <p><input type="text" name="username" value="" formControlName="username" placeholder="Username or Email"></p>
+    <div
+      *ngIf="(loginForm.get('username')?.touched || loginForm.get('username')?.dirty) && loginForm.get('username')?.errors"
+      class="error">Invalid Username</div><br>
+
+    <p><input type="password" name="password" formControlName="password" value="" placeholder="Password"></p>
+    <div
+      *ngIf="(loginForm.get('password')?.touched || loginForm.get('password')?.dirty) && loginForm.get('password')?.errors"
+      class="error">Invalid Password</div><br><br>
+
+    <p class="remember_me">
+      <label>
+        <input type="checkbox" name="remember_me" id="remember_me">
+        Remember me on this computer
+      </label>
+    </p>
+    <p class="submit"><input type="submit" name="commit" value="Login"></p>
+  </form>
+</div>
+
+<div class="login-help">
+  <p>Forgot your password? <a href="#">Click here to reset it</a>.</p>
+</div>

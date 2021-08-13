@@ -1,0 +1,41 @@
+<div class="txt">
+
+  <div class="container">
+    <div class="brand-title" style="text-align: center;">Insert Details</div>
+    <form method="post" [formGroup]="insertForm">
+      <div class="inputs">
+        <label>Book ID</label>
+        <input type="text" [(ngModel)]="bid" name="bid" required="required">
+        <div *ngIf="(insertForm.get('bid')?.touched || insertForm.get('bid')?.dirty) && insertForm.get('bid')?.errors" class="error">Invalid ID</div><br>
+
+        <label>Book Name</label>
+        <input type="text" [(ngModel)]="name" name="name" required="required">
+        <div *ngIf="(insertForm.get('name')?.touched || insertForm.get('name')?.dirty) && insertForm.get('name')?.errors" class="error">Invalid ID</div><br>
+
+        <label>Author</label>
+        <input type="text" [(ngModel)]="author" name="auth" required="required">
+        <div *ngIf="(insertForm.get('author')?.touched || insertForm.get('author')?.dirty) && insertForm.get('author')?.errors" class="error">Invalid ID</div><br>
+
+        <label>Price</label>
+        <input type="text" [(ngModel)]="price" name="prc" required="required">
+        <div *ngIf="(insertForm.get('price')?.touched || insertForm.get('price')?.dirty) && insertForm.get('price')?.errors" class="error">Invalid ID</div><br>
+
+        <label>Publisher</label>
+        <input type="text" [(ngModel)]="publisher" name="publsh" required="required">
+        <div *ngIf="(insertForm.get('publisher')?.touched || insertForm.get('publisher')?.dirty) && insertForm.get('publisher')?.errors" class="error">Invalid ID</div><br>
+
+        <label>Stock</label>
+        <input type="text" [(ngModel)]="stockdt" name="stk" required="required">
+        <div *ngIf="(insertForm.get('stockdt')?.touched || insertForm.get('stockdt')?.dirty) && insertForm.get('stockdt')?.errors" class="error">Invalid ID</div><br>
+
+
+
+
+        <button class="button" (click)="insert()">Insert</button>
+        <button class="button" (click)="tablenav()">Go to table</button>
+
+      </div>
+
+    </form>
+  </div>
+</div>

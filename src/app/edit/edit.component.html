@@ -1,0 +1,38 @@
+<div class="txt">
+
+    <div class="container">
+        <div class="brand-title" style="text-align: center;">Edit Details</div>
+        <form [formGroup]="updateForm">
+            <div class="inputs">
+                <label>{{bid}}</label>
+                <label>Book Name</label>
+                <input type="text" class="form-control" formControlName="bname" [(ngModel)]="bname" name="nam">
+                <div *ngIf="(updateForm.get('bname')?.touched || updateForm.get('bname')?.dirty) && updateForm.get('bname')?.errors"
+                    class="error">Invalid Format</div><br>
+                <label>Author</label>
+                <input type="text" class="form-control" formControlName="bauthor" [(ngModel)]="bauthor" name="name">
+                <div *ngIf="(updateForm.get(' bauthor')?.touched || updateForm.get('bauthor')?.dirty) && updateForm.get('bauthor')?.errors"
+                    class="error">Invalid format</div><br>
+                <label>Price</label>
+                <input type="text" class="form-control" formControlName="bprice" [(ngModel)]="bprice" name="namee">
+                <div *ngIf="(updateForm.get(' bprice')?.touched || updateForm.get('bprice')?.dirty) && updateForm.get('bprice')?.errors"
+                    class="error">Invalid format</div><br>
+                <label>Publisher</label>
+                <input type="text" class="form-control" formControlName="bpublish" [(ngModel)]="bpublish"
+                    name="nameeee">
+                <div *ngIf="(updateForm.get(' bpublish')?.touched || updateForm.get('bpublish')?.dirty) && updateForm.get('bpublish')?.errors"
+                    class="error">Invalid format</div><br>
+                <label>Stock</label>
+                <input type="text" class="form-control" formControlName="bstock" [(ngModel)]="bstock" name="nameeeeeee">
+                <div *ngIf="(updateForm.get(' bstock')?.touched || updateForm.get('bstock')?.dirty) && updateForm.get('bstock')?.errors"
+                    class="error">Invalid format</div><br>
+                <button class="button" (click)="editbook()">Edit</button>
+
+
+
+
+            </div>
+
+        </form>
+    </div>
+</div>

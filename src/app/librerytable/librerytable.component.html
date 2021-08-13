@@ -1,0 +1,32 @@
+<h2>Available Books</h2>
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th style="text-align: left">ID</th>
+        <th style="text-align: left">Title</th>
+        <th style="text-align: left">Author</th>
+        <th style="text-align: left">Price</th>
+        <th style="text-align: left">Publisher</th>
+        <th style="text-align: left">Stock</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let obj of result ">
+        <td style="text-align: left"> {{obj[0]}} </td>
+        <td style="text-align: left" [routerLink]="['/bookdetails',obj[0]]"> {{obj[1]}} </td>
+        <td style="text-align: left"> {{obj[2]}} </td>
+        <td style="text-align: left"> {{obj[3]}} </td>
+        <td style="text-align: left"> {{obj[4]}} </td>
+        <td style="text-align: left"> {{obj[5]}} </td>
+
+
+      </tr>
+    <tbody>
+  </table>
+
+</div>
+
+<button class="button" (click)="insertdt()">Insert Data</button>
